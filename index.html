@@ -14,109 +14,78 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="header__contenedor">
-        <div class="contenedor header__navegacion">
-          <div class="logo__contenedor">
-            <img
-              src="img/Logo-Global.jpg"
-              alt="Logo Global Corredores de Seguros"
-            />
-            <div class="logo__contenedor__info">
-              <p class="logo__contenedor__info__nombre">
-                Global Corredores de Seguros
-              </p>
-              <div class="logo__contenedor__info__registro">
+        <div class="header__navegacion">
+          <div class="header__logo">
+            <div class="header__logoImagen">
+              <img
+                src="img/Logo-Global.jpg"
+                alt="Logo Global Corredores de Seguros"
+              />
+            </div>
+
+            <div class="header__logoInfo">
+              <p class="header__logoNombre">Global Corredores de Seguros</p>
+              <div class="header__logoRegistro">
                 <p>Registro Superintendencia de Bancos CS-39</p>
                 <p>Vencimiento: 08/03/2025</p>
               </div>
             </div>
           </div>
-          <div class="contactos__contenedor">
-            <div class="email__contenedor">
-              <svg
-                width="63"
-                height="63"
-                viewBox="0 0 63 63"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Icon">
-                  <circle
-                    id="Background"
-                    cx="31.5"
-                    cy="31.5"
-                    r="31"
-                    fill="#501D9A"
-                    stroke="#501D9A"
-                  />
-                  <path
-                    id="Vector"
-                    d="M40.996 23H23.004C22.4495 23 22 23.3755 22 23.8387V37.1613C22 37.6245 22.4495 38 23.004 38H40.996C41.5505 38 42 37.6245 42 37.1613V23.8387C42 23.3755 41.5505 23 40.996 23Z"
-                    stroke="white"
-                  />
-                  <path
-                    id="Vector_2"
-                    d="M22 23L32.4247 30L42 23.2294"
-                    stroke="white"
-                  />
-                </g>
-              </svg>
-              <div class="email__contenedor__info">
-                <p>Email</p>
-                <p>info@globaldeseguros.com</p>
+          <div class="header__contactos">
+            <div class="header__email">
+              <div class="header__iconoEmail">
+                <img
+                  src="img/Email-icono.svg"
+                  alt="Icono Email"
+                  class="email-imagen"
+                />
+              </div>
+              <div class="header__emailInfo">
+                <p class="header__emailLabel">Email</p>
+                <a
+                  class="header__emailLink"
+                  href="mailto:info@globaldeseguros.com"
+                  >info@globaldeseguros.com</a
+                >
               </div>
             </div>
-            <div class="telefono__contenedor">
-              <svg
-                width="63"
-                height="63"
-                viewBox="0 0 63 63"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Icon">
-                  <circle
-                    id="Background"
-                    cx="31.5"
-                    cy="31.5"
-                    r="31"
-                    fill="#501D9A"
-                    stroke="#273270"
-                  />
-                  <path
-                    id="Vector"
-                    d="M23.9741 22.1408C23.8394 22.1449 23.7071 22.1743 23.5848 22.2272C23.4625 22.28 23.3528 22.3554 23.2622 22.4487C23.1715 22.542 23.1018 22.6514 23.0571 22.7704C23.0124 22.8894 22.9936 23.0156 23.0019 23.1416C23.1364 25.3015 23.7704 30.5716 26.8059 33.8583C30.4409 37.8181 35.1748 39.1824 40.0317 38.9808C40.292 38.9662 40.5368 38.8596 40.7165 38.6826C40.8962 38.5055 40.9975 38.2712 41 38.0268V34.5674C40.997 34.2446 40.8783 33.9322 40.663 33.6802C40.4476 33.4282 40.1482 33.2513 39.8127 33.1779L37.3804 32.6739C37.0796 32.6138 36.7664 32.6397 36.4815 32.7481C36.1965 32.8566 35.9528 33.0427 35.7819 33.2823L35.244 34.0454C35.1946 34.1153 35.1208 34.1668 35.0352 34.1911C34.9496 34.2154 34.8577 34.211 34.7752 34.1786C33.5379 33.6783 28.6081 31.5184 28.0663 27.8753C28.0557 27.805 28.0675 27.7333 28.1003 27.6692C28.1332 27.6051 28.1855 27.5516 28.2507 27.5154L29.2267 26.9574C29.4944 26.802 29.7047 26.5732 29.8291 26.3022C29.9535 26.0311 29.986 25.7308 29.9222 25.4419L29.3881 23.1236C29.31 22.7988 29.1142 22.5093 28.8339 22.3045C28.5537 22.0998 28.2064 21.9923 27.8511 22.0004L23.9741 22.1408Z"
-                    stroke="white"
-                  />
-                </g>
-              </svg>
-              <div class="telefono__contenedor__info">
-                <p>Contáctanos</p>
-                <p>(+502) 2269-2691</p>
+            <div class="header__telefono">
+              <div class="header__iconoTelefono">
+                <img
+                  src="img/Email-icono.svg"
+                  alt="Icono Email"
+                  class="email-imagen"
+                />
+              </div>
+              <div class="header__telefonoInfo">
+                <p class="header__telefonolLabel">Contáctanos</p>
+                <a class="header__telefonoLink" href="tel:+502 2269-2691"
+                  >(+502) 2269-2691</a
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="header__color">
-        <div class="contenedor header_nav_contenedor">
-          <nav class="barra__navegacion">
-            <a href="">Inicio</a>
-            <a href="">Condiciones</a>
-            <a href="">Cobertura</a>
-            <a href="">Beneficios</a>
-            <a href="">Contáctanos</a>
-          </nav>
+      <section class="header__hero">
+        <div class="header__heroBarra">
+          <div class="header__heroNav headerHero__contenedor">
+            <nav class="header__heroNavegacion">
+              <a href="">Inicio</a>
+              <a href="">Condiciones</a>
+              <a href="">Cobertura</a>
+              <a href="">Beneficios</a>
+              <a href="">Contáctanos</a>
+            </nav>
+          </div>
         </div>
-      </div>
-
-      <section class="hero">
-        <div class="hero__grid contenedor">
-          <div class="hero__info">
+        <div class="header__heroGrid contenedor">
+          <div class="header__heroInfo">
             <img
-              class="hero__logo"
+              class="header__heroLogo"
               src="img/Logo-Guatemala.svg"
               alt="Logo Guatemala"
             />
@@ -126,9 +95,10 @@
               para turistas en Guatemala te respalda en cada paso de tu viaje,
               para que vivas experiencias inolvidables sin contratiempos.
             </p>
-            <a class="btn">Adquirir seguro</a>
+            <a class="hero__btn">Adquirir seguro</a>
           </div>
         </div>
+        <div class="header_heroPattern"></div>
       </section>
     </header>
   </body>

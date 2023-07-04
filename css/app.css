@@ -1,22 +1,29 @@
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; /* 1REM = 10px*/
+:root {
+  --primario: #8600d3bd;
+  --secundario: #cb0083;
+  --blanco: #fff;
+  --negro: #000000;
+  --fuentePrincipal: "Raleway", sans-serif;
+  --fuenteLogo: "Montserrat", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
 *,
 *:before,
-*::after {
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--fuentePrincipal);
   font-size: 1.6rem;
   line-height: 2;
 }
 
 /* Globales */
-
 h1,
 h2,
 h3 {
@@ -29,12 +36,22 @@ p {
 
 a {
   text-decoration: none;
-  color: #000;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+[class$="__contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+[class$="__heading"] {
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .contenedor {
@@ -44,63 +61,57 @@ img {
 
 /*Header*/
 
-.header__contenedor {
-  background-color: #fff;
-}
-
 .header__navegacion {
   display: flex;
   align-items: center;
   padding: 2.5rem 0;
-  position: relative;
-  z-index: 50;
 }
 
-.logo__contenedor {
+.header__logo {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-.logo__contenedor__info {
+.header__logoInfo {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--fuenteLogo);
 }
 
-.logo__contenedor__info__nombre {
+.header__logoNombre {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-.logo__contenedor__info__registro {
+.header__logoRegistro {
   font-size: 0.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: 128.9%;
 }
 
-.contactos__contenedor {
+.header__contactos {
   display: flex;
   justify-content: flex-end;
   gap: 3.9rem;
   flex-grow: 1;
 }
 
-.email__contenedor,
-.telefono__contenedor {
+.header__email,
+.header__telefono {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-.email__contenedor__info,
-.telefono__contenedor__info {
+.header__emailInfo,
+.header__telefonoInfo {
   display: flex;
   flex-direction: column;
-  color: #000;
+  color: var(--negro);
   font-size: 1.4rem;
   font-family: Krub;
   font-style: normal;
@@ -108,29 +119,41 @@ img {
   line-height: 135.023%;
 }
 
-.header__color {
-  height: 7.8rem;
-  background-color: #8600d3bd;
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 40;
+.header__emailLink,
+.header__telefonoLink {
+  color: var(--negro);
 }
 
-.header_nav_contenedor {
+/*hero*/
+.header__hero {
+  background-image: url(../img/Lago.png);
+  height: 59rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.header__heroBarra {
+  height: 7.8rem;
+  background-color: var(--primario);
+  display: flex;
+  align-items: center;
+}
+
+.header__heroNav {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
 }
 
-.barra__navegacion {
+.header__heroNavegacion {
   display: flex;
 }
 
-.barra__navegacion a {
+.header__heroNavegacion a {
   padding: 0 3rem;
   border-left: 1px solid #ffffff33;
-  color: #fff;
+  color: var(--blanco);
   font-size: 1.6rem;
   font-family: Krub;
   font-style: normal;
@@ -138,25 +161,12 @@ img {
   line-height: 135.023%;
 }
 
-.barra__navegacion a:first-child {
+.header__heroNavegacion a:first-child {
   border-left: none;
 }
 
-.barra__navegacion a:last-child {
+.header__heroNavegacion a:last-child {
   padding-right: 0;
-}
-
-/*hero*/
-.hero {
-  background-image: url(../img/Lago.png);
-  height: 59rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  z-index: -1;
-  margin: -8.8rem 0;
-  display: flex;
 }
 
 .hero__logo {
@@ -166,20 +176,15 @@ img {
   margin-bottom: 2rem;
 }
 
-.hero__grid {
-  display: flex;
-  justify-content: flex-start;
+.header__heroGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: calc(59rem - 7.8rem);
   align-items: center;
-  margin-top: 8rem;
 }
 
-.hero__info {
-  flex-direction: column;
-  flex-basis: 50%;
-}
-
-.hero__info h2 {
-  color: #fff;
+.header__heroInfo h2 {
+  color: var(--blanco);
   font-size: 6rem;
   font-family: Rubik;
   font-style: normal;
@@ -187,8 +192,8 @@ img {
   line-height: normal;
 }
 
-.hero__info p {
-  color: #fff;
+.header__heroInfo p {
+  color: var(--blanco);
   font-size: 1.6rem;
   font-family: Krub;
   font-style: normal;
@@ -196,18 +201,22 @@ img {
   line-height: 151.523%;
 }
 
-.btn {
+.hero__btn {
   display: block;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 0.25rem;
   width: 27%;
   text-align: center;
-  color: #fff;
+  color: var(--blanco);
   border-radius: 0.8rem;
-  background: #cb0083;
+  background-color: var(--secundario);
   margin-top: 2.7rem;
   font-size: 1.6rem;
   font-family: Krub;
   font-style: normal;
   font-weight: 700;
   line-height: 135.023%;
+}
+
+.header__heroPattern {
+  background-image: url(..);
 }

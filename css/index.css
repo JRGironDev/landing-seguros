@@ -1,5 +1,6 @@
 :root {
   --primario: #8600d3bd;
+  --primario-obscuro: #8600d3;
   --secundario: #cb0083;
   --blanco: #fff;
   --negro: #000000;
@@ -55,11 +56,16 @@ img {
 }
 
 /*Header*/
-
 .header__navegacion {
-  display: flex;
-  align-items: center;
-  padding: 2.5rem 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__navegacion {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+  }
 }
 
 .header__logo {
@@ -121,19 +127,34 @@ img {
 }
 
 /*hero*/
+
 .header__hero {
   background-image: url(../img/Lago.png);
-  height: 59rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .header__hero {
+    height: 59rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
 }
 
 .header__heroBarra {
   height: 7.8rem;
   background-color: var(--primario);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .header__heroBarra {
+    align-items: center;
+  }
 }
 
 .header__heroNav {
@@ -168,39 +189,63 @@ img {
 .hero__logo {
   width: 23.4202rem;
   height: 5.219rem;
-  margin-left: -2rem;
-  margin-bottom: 2rem;
+  margin-left: -4rem;
+  margin-bottom: 3rem;
 }
 
 .header__heroGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: calc(59rem - 7.8rem);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.header__heroInfo h2 {
+@media (min-width: 768px) {
+  .header__heroGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(59rem - 7.8rem);
+    align-items: center;
+  }
+}
+
+.header__heroInfo--desktop {
+  display: none;
+}
+
+.header__heroLogo--movil {
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header__heroInfo--movil h2 {
   color: var(--blanco);
-  font-size: 6rem;
+  text-align: center;
+  font-size: 3.2rem;
   font-family: Rubik;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  width: 60%;
+  margin: 0 auto 3rem auto;
 }
 
-.header__heroInfo p {
+.header__heroInfo--movil p {
   color: var(--blanco);
+  text-align: center;
   font-size: 1.6rem;
   font-family: Krub;
   font-style: normal;
   font-weight: 500;
   line-height: 151.523%;
+  width: 70%;
+  margin: 0 auto 3rem auto;
 }
 
-.hero__btn {
+.header__heroInfo--movil .hero__btn {
   display: block;
-  padding: 1.5rem 0.25rem;
-  width: 27%;
+  padding: 1.75rem 1.5rem;
+  width: 50%;
   text-align: center;
   color: var(--blanco);
   border-radius: 0.8rem;
@@ -211,6 +256,53 @@ img {
   font-style: normal;
   font-weight: 700;
   line-height: 135.023%;
+  margin: 0 auto 6rem auto;
+}
+
+@media (min-width: 768px) {
+  .header__heroInfo--movil {
+    display: none;
+  }
+
+  .header__heroInfo--desktop {
+    display: block;
+  }
+
+  .header__heroInfo--desktop h2 {
+    color: var(--blanco);
+    font-size: 6rem;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+
+  .header__heroInfo--desktop p {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    font-family: Krub;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 151.523%;
+    margin-top: 1rem;
+  }
+
+  .header__heroInfo--desktop .hero__btn {
+    display: block;
+    padding: 1.5rem 0.25rem;
+    width: 27%;
+    text-align: center;
+    color: var(--blanco);
+    border-radius: 0.8rem;
+    background-color: var(--secundario);
+    margin-top: 2.7rem;
+    font-size: 1.6rem;
+    font-family: Krub;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135.023%;
+  }
 }
 
 .header__heroPattern {
@@ -219,60 +311,133 @@ img {
 }
 
 .condiciones {
-  margin: 15rem 0 5rem 0;
+  margin: 7rem 0 0 0;
+}
+
+.condiciones__contenedor {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .condiciones {
+    margin: 15rem 0 5rem 0;
+  }
+
+  .condiciones__contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 .condiciones__heading {
   color: var(--negro);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-family: Rubik;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  padding: 0 3rem 0 3rem;
+}
+
+@media (min-width: 768px) {
+  .condiciones__heading {
+    font-size: 3.5rem;
+    padding: 0 2rem 0 2rem;
+  }
 }
 
 .condiciones__heading--primario {
-  color: var(--primario);
+  color: var(--primario-obscuro);
 }
 
 .condiciones__grid {
-  margin-top: 10rem;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 4.8rem;
+  margin-top: 5rem;
+  background-color: #f4f4f4;
+}
+
+@media (min-width: 768px) {
+  .condiciones__grid {
+    background-color: transparent;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 4.8rem;
+  }
 }
 
 .condiciones__aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  color: var(--primario);
-  font-size: 3.2rem;
+  color: var(--primario-obscuro);
+  font-size: 2.5rem;
   font-family: Rubik;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-align: center;
+  padding: 4rem 3rem 0 3rem;
+}
+
+@media (min-width: 768px) {
+  .condiciones__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--primario);
+    font-size: 3.2rem;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+  }
 }
 
 .listado-condiciones {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #ebebeb;
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .listado-condiciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #ebebeb;
+  }
 }
 
 .condicion {
   display: flex;
-  width: 39rem;
-  gap: 4rem;
+  flex-direction: column;
+  width: 80%;
+  gap: 2rem;
+  align-items: center;
+  margin: 5rem auto;
+}
+
+@media (min-width: 768px) {
+  .condicion {
+    display: flex;
+    flex-direction: row;
+    width: 39rem;
+    gap: 4rem;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
 }
 
 .condicion__icono {
   height: 10rem;
-  border-right: 1px solid #d8d8d8;
-  padding-right: 2.9rem;
+}
+
+@media (min-width: 768px) {
+  .condicion__icono {
+    height: 10rem;
+    border-right: 1px solid #d8d8d8;
+    padding-right: 2.9rem;
+  }
 }
 
 .condicion__imagen {
@@ -307,6 +472,13 @@ img {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .condicion__title {
+    text-align: left;
+  }
 }
 
 .condicion__description {
@@ -316,23 +488,54 @@ img {
   font-style: normal;
   font-weight: 500;
   line-height: 151.523%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .condicion__description {
+    text-align: left;
+  }
 }
 
 .respaldo {
-  margin: 5rem 0;
+  margin: 0;
+  padding-bottom: 6rem;
+  background-color: #f4f4f4;
 }
 
-.respaldo__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+@media (min-width: 768px) {
+  .respaldo {
+    margin: 5rem 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .respaldo__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 0;
+  }
 }
 
 .respaldo__flex {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .respaldo__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 0;
+  }
 }
 
 .respaldo__logoMAPFRE {
@@ -347,7 +550,8 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .respaldo__description {
@@ -357,12 +561,29 @@ img {
   font-style: normal;
   font-weight: 500;
   line-height: 151.523%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .respaldo__title {
+    margin-bottom: 0.8rem;
+    text-align: left;
+  }
+
+  .respaldo__description {
+    text-align: left;
+  }
 }
 
 /*Cobertura*/
 .cobertura {
-  background-color: #f4f4f4;
   height: 61.2rem;
+}
+
+@media (min-width: 768px) {
+  .cobertura {
+    background-color: #f4f4f4;
+  }
 }
 
 .cobertura__heading {

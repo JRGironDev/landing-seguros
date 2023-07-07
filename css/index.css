@@ -166,7 +166,7 @@ img {
   justify-content: flex-end;
   flex-grow: 1;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 3rem;
 }
 
 @media (min-width: 768px) {
@@ -177,13 +177,18 @@ img {
 
 .header__hamburguerButton {
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  background-color: var(--blanco);
+  border-style: none;
+  border-radius: 0.5rem;
 }
 
 .header__hamburguerButton svg {
-  width: 20px;
-  height: 20px;
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--blanco);
 }
 
 @media (min-width: 768px) {
@@ -195,6 +200,30 @@ img {
 .header__heroNavegacion {
   display: none;
   width: 100%;
+  transition: all 0.5s ease;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.header__heroNavegacion.activo {
+  display: block;
+  height: 45vh;
+  pointer-events: auto;
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .header__heroNavegacion {
+    display: block;
+    height: 100%;
+    opacity: 0.9;
+  }
 }
 
 .header__heroNavegacionUl {

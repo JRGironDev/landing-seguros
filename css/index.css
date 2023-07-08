@@ -2,6 +2,7 @@
   --primario: #8600d3bd;
   --primario-obscuro: #8600d3;
   --secundario: #cb0083;
+  --secundario-claro: #e60296;
   --blanco: #fff;
   --negro: #000000;
   --fuentePrincipal: "Raleway", sans-serif;
@@ -129,16 +130,19 @@ img {
 /*hero*/
 
 .header__hero {
-  background-image: url(../img/Lago.png);
+  background-image: url(../img/Lago\ Movil.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 50% center;
 }
 
 @media (min-width: 768px) {
   .header__hero {
+    background-image: url(../img/Lago.png);
     height: 59rem;
     background-position: top;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -176,13 +180,35 @@ img {
 }
 
 .header__hamburguerButton {
-  padding: 0;
-  width: 3.5rem;
-  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: transparent;
+  gap: 0.65rem;
   cursor: pointer;
-  background-color: var(--blanco);
-  border-style: none;
-  border-radius: 0.5rem;
+  padding-top: 1rem;
+}
+
+.header__hamburguerButton > div {
+  background: var(--blanco);
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+.header__hamburguerButton:hover div:first-child {
+  transform: rotate(45deg);
+}
+.header__hamburguerButton:hover div:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburguerButton:hover div:last-child {
+  transform: rotate(-45deg);
 }
 
 .header__hamburguerButton svg {
@@ -213,7 +239,7 @@ img {
 
 .header__heroNavegacion.activo {
   display: block;
-  height: 45vh;
+  height: 40vh;
   pointer-events: auto;
   opacity: 0.9;
 }
@@ -223,6 +249,7 @@ img {
     display: block;
     height: 100%;
     opacity: 0.9;
+    pointer-events: auto;
   }
 }
 
@@ -269,7 +296,30 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 135.023%;
-  padding: 1rem;
+  padding: 1rem 10px;
+  margin: 2rem 0;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.header__heroNavegacionUl a:after {
+  content: "";
+  position: absolute;
+  background-color: var(--blanco);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.header__heroNavegacionUl a:hover {
+  opacity: 1;
+}
+
+.header__heroNavegacionUl a:hover:after {
+  width: 100%;
 }
 
 .hero__logo {
@@ -343,6 +393,8 @@ img {
   line-height: 135.023%;
   margin: 0 auto 6rem auto;
   cursor: pointer;
+  transition-property: transform background-color;
+  transition-duration: 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -390,6 +442,14 @@ img {
     line-height: 135.023%;
     cursor: pointer;
   }
+}
+
+.hero__btn:hover {
+  background-color: var(--secundario-claro);
+}
+
+.hero__btn:active {
+  transform: scale(0.9);
 }
 
 .header__heroPattern {
@@ -502,6 +562,8 @@ img {
   gap: 2rem;
   align-items: center;
   margin: 5rem auto;
+  transition-property: transform;
+  transition-duration: 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -513,6 +575,10 @@ img {
     align-items: flex-start;
     margin: 0 auto;
   }
+}
+
+.condicion:hover {
+  transform: scale(1.1);
 }
 
 .condicion__icono {
@@ -806,6 +872,8 @@ img {
   font-weight: 700;
   line-height: 135.023%;
   cursor: pointer;
+  transition-property: transform background-color;
+  transition-duration: 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -825,6 +893,14 @@ img {
     line-height: 135.023%;
     cursor: pointer;
   }
+}
+
+.cobertura__btn:hover {
+  background-color: var(--secundario-claro);
+}
+
+.cobertura__btn:active {
+  transform: scale(0.9);
 }
 
 .beneficios__heading {
@@ -925,6 +1001,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition-property: transform;
+  transition-duration: 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -937,6 +1015,10 @@ img {
     flex-direction: row;
     gap: 5rem;
   }
+}
+
+.beneficio:hover {
+  transform: scale(1.02);
 }
 
 @media (min-width: 768px) {
@@ -1072,6 +1154,8 @@ img {
   line-height: normal;
   margin: 2rem auto 2.5rem auto;
   cursor: pointer;
+  transition-property: transform background-color;
+  transition-duration: 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -1079,6 +1163,14 @@ img {
     width: 27%;
     margin: 2rem auto 0 auto;
   }
+}
+
+.adquisicion__btn:hover {
+  background-color: #131313;
+}
+
+.adquisicion__btn:active {
+  transform: scale(0.9);
 }
 
 .footer {
@@ -1197,6 +1289,21 @@ img {
   line-height: 135.023%;
   border: none;
   cursor: pointer;
+  transition-property: transform background-color;
+  transition-duration: 0.3s ease;
+}
+
+.form__btn:hover {
+  background-color: linear-gradient(
+    to right,
+    #e1a224 0%,
+    #dfbf4c 50%,
+    #d7b68e 100%
+  );
+}
+
+.form__btn:active {
+  transform: scale(0.9);
 }
 
 .form__icons {

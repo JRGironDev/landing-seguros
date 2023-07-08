@@ -127,8 +127,7 @@ img {
   color: var(--negro);
 }
 
-/*hero*/
-
+/*Hero*/
 .header__hero {
   background-image: url(../img/Lago\ Movil.png);
   background-repeat: no-repeat;
@@ -141,7 +140,6 @@ img {
     background-image: url(../img/Lago.png);
     height: 59rem;
     background-position: top;
-    background-size: cover;
     background-position: center;
   }
 }

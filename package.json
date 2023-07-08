@@ -1,0 +1,22 @@
+{
+  "name": "seguro-viajero",
+  "version": "1.0.0",
+  "description": "Landing Seguro Viajero",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRGironDev/landing-seguros.git"
+  },
+  "author": "TSC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRGironDev/landing-seguros/issues"
+  },
+  "homepage": "https://github.com/JRGironDev/landing-seguros#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

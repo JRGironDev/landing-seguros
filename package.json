@@ -4,7 +4,7 @@
   "description": "Landing Seguro Viajero",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,18 @@
   },
   "homepage": "https://github.com/JRGironDev/landing-seguros#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.25"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
   }
 }

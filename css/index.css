@@ -2,7 +2,7 @@
   --primario: #8600d3bd;
   --primario-obscuro: #8600d3;
   --secundario: #cb0083;
-  --secundario-claro: #e60296;
+  --secundario-claro: #e20086;
   --blanco: #fff;
   --negro: #000000;
   --fuentePrincipal: "Raleway", sans-serif;
@@ -61,7 +61,7 @@ img {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header__navegacion {
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@ img {
 
 /*Hero*/
 .header__hero {
-  background-image: url(../img/Lago\ Movil.png);
+  background-image: url(../build/img/Lago.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% center;
@@ -137,7 +137,7 @@ img {
 
 @media (min-width: 768px) {
   .header__hero {
-    background-image: url(../img/Lago.png);
+    background-image: url(../build/img/Lago.png);
     height: 59rem;
     background-position: top;
     background-position: center;
@@ -153,11 +153,6 @@ img {
 @media (min-width: 768px) {
   .header__heroBarra {
     height: 7.8rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .header__heroBarra {
     align-items: center;
   }
 }
@@ -235,13 +230,6 @@ img {
   opacity: 0;
 }
 
-.header__heroNavegacion.activo {
-  display: block;
-  height: 40vh;
-  pointer-events: auto;
-  opacity: 0.9;
-}
-
 @media (min-width: 768px) {
   .header__heroNavegacion {
     display: block;
@@ -249,6 +237,13 @@ img {
     opacity: 0.9;
     pointer-events: auto;
   }
+}
+
+.header__heroNavegacion.activo {
+  display: block;
+  height: 40vh;
+  pointer-events: auto;
+  opacity: 0.9;
 }
 
 .header__heroNavegacionUl {
@@ -262,6 +257,20 @@ img {
 @media (min-width: 768px) {
   .header__heroNavegacionUl {
     flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__heroNavegacionUl {
+    justify-content: flex-end;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__heroNavegacionUl {
+    padding: 0;
   }
 }
 
@@ -406,6 +415,53 @@ img {
 
   .header__heroInfo--desktop h2 {
     color: var(--blanco);
+    font-size: 4rem;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+
+  .header__heroInfo--desktop p {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-family: Krub;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 151.523%;
+    margin-top: 1rem;
+  }
+
+  .header__heroInfo--desktop .hero__btn {
+    display: block;
+    padding: 1.5rem 0.25rem;
+    width: 37%;
+    text-align: center;
+    color: var(--blanco);
+    border-radius: 0.8rem;
+    background-color: var(--secundario);
+    margin-top: 2.7rem;
+    font-size: 1.6rem;
+    font-family: Krub;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135.023%;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__heroInfo--movil {
+    display: none;
+  }
+
+  .header__heroInfo--desktop {
+    display: block;
+  }
+
+  .header__heroInfo--desktop h2 {
+    color: var(--blanco);
     font-size: 6rem;
     font-family: Rubik;
     font-style: normal;
@@ -451,10 +507,11 @@ img {
 }
 
 .header__heroPattern {
-  background-image: url(../img/Pattern\ 1.svg);
+  background-image: url(../build/img/Pattern\ 1.svg);
   height: 6rem;
 }
 
+/*Condiciones*/
 .condiciones {
   margin: 7rem 0 0 0;
 }
@@ -487,8 +544,14 @@ img {
 
 @media (min-width: 768px) {
   .condiciones__heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     padding: 0 2rem 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .condiciones__heading {
+    font-size: 3.5rem;
   }
 }
 
@@ -501,7 +564,7 @@ img {
   background-color: #f4f4f4;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .condiciones__grid {
     background-color: transparent;
     margin-top: 10rem;
@@ -524,16 +587,18 @@ img {
 
 @media (min-width: 768px) {
   .condiciones__aside {
+    padding: 4rem 10rem 2rem 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .condiciones__aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    color: var(--primario);
     font-size: 3.2rem;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
     text-align: left;
+    padding: 2rem;
   }
 }
 
@@ -542,7 +607,7 @@ img {
   border-bottom: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .listado-condiciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -566,11 +631,18 @@ img {
 
 @media (min-width: 768px) {
   .condicion {
-    display: flex;
     flex-direction: row;
+    width: 59rem;
+    gap: 6rem;
+    align-items: flex-start;
+    margin: 4rem auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .condicion {
     width: 39rem;
     gap: 4rem;
-    align-items: flex-start;
     margin: 0 auto;
   }
 }
@@ -585,7 +657,6 @@ img {
 
 @media (min-width: 768px) {
   .condicion__icono {
-    height: 10rem;
     border-right: 1px solid #d8d8d8;
     padding-right: 2.9rem;
   }
@@ -596,13 +667,13 @@ img {
 }
 
 .condicion__imagen-Beneficiarios {
-  width: 6.9261rem;
+  width: 7rem;
   height: 6.8rem;
 }
 
 .condicion__imagen-Territorialidad {
-  width: 7.5rem;
-  height: 11.5rem;
+  width: 7rem;
+  height: 11rem;
 }
 
 .condicion__imagen-Beneficios {
@@ -611,8 +682,8 @@ img {
 }
 
 .condicion__imagen-Cobertura {
-  width: 7.7rem;
-  height: 12.6rem;
+  width: 7rem;
+  height: 12rem;
 }
 
 .condicion__title {
@@ -681,10 +752,7 @@ img {
 
 @media (min-width: 768px) {
   .respaldo__flex {
-    display: flex;
-    flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
     margin-bottom: 0;
   }
 }
@@ -727,7 +795,6 @@ img {
 }
 
 /*Cobertura*/
-
 @media (min-width: 768px) {
   .cobertura {
     height: 61.2rem;
@@ -748,14 +815,7 @@ img {
 
 @media (min-width: 768px) {
   .cobertura__heading {
-    color: var(--primario);
     font-size: 3.5rem;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 5rem 0 2rem 0;
-    margin: 0;
   }
 }
 
@@ -799,11 +859,7 @@ img {
 
 @media (min-width: 768px) {
   .cobertura__flex {
-    display: flex;
     align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
     margin: 0;
   }
 }
@@ -876,20 +932,7 @@ img {
 
 @media (min-width: 768px) {
   .cobertura__btn {
-    display: block;
-    padding: 1.5rem 0.25rem;
     width: 27%;
-    text-align: center;
-    color: var(--blanco);
-    border-radius: 0.8rem;
-    background-color: var(--secundario);
-    margin: 2.7rem 0;
-    font-size: 1.6rem;
-    font-family: Krub;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 135.023%;
-    cursor: pointer;
   }
 }
 
@@ -942,8 +985,6 @@ img {
   .beneficios__listado {
     width: 113.6rem;
     height: 56.7rem;
-    background-color: #f2f2f2;
-    margin: 0 auto;
     border-top-right-radius: 2rem;
     padding-bottom: 0;
     border-top-left-radius: 2rem;
@@ -1005,11 +1046,7 @@ img {
 
 @media (min-width: 768px) {
   .beneficio {
-    background-color: var(--blanco);
-    border-radius: 2rem;
-    margin: 2rem;
     padding: 1rem 3rem;
-    display: flex;
     flex-direction: row;
     gap: 5rem;
   }
@@ -1064,7 +1101,7 @@ img {
 }
 
 .beneficio__limite-hasta {
-  color: #e20086;
+  color: var(--secundario-claro);
   font-size: 1.4rem;
   font-family: Rubik;
   font-style: normal;
@@ -1073,7 +1110,7 @@ img {
 }
 
 .beneficio__precio {
-  color: #e20086;
+  color: var(--secundario-claro);
   font-size: 1.6rem;
   font-family: Rubik;
   font-style: normal;
@@ -1082,7 +1119,7 @@ img {
 }
 
 .adquisicion__gradiente {
-  background: linear-gradient(to right, #8600d3 25%, #cb0083 100%);
+  background: linear-gradient(to bottom, #8600d3 25%, #cb0083 100%);
   width: 90%;
   margin: 2rem auto 8rem auto;
   padding: 3rem 2rem;
@@ -1099,10 +1136,6 @@ img {
     width: 104rem;
     margin: 11rem auto;
     padding: 5rem 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
   }
 }
 
@@ -1119,7 +1152,6 @@ img {
 
 @media (min-width: 768px) {
   .adquisicion__heading {
-    color: var(--blanco);
     font-size: 4rem;
     margin-bottom: 1rem;
   }
@@ -1185,9 +1217,7 @@ img {
 
 @media (min-width: 768px) {
   .footer__navegacion {
-    display: flex;
     flex-direction: row;
-    align-items: center;
     padding: 9rem 0;
   }
 }

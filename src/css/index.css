@@ -532,7 +532,7 @@ img {
   }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   .condiciones__contenedor {
     max-width: 120rem;
     margin: 0 auto;

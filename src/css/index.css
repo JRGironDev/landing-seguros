@@ -12,6 +12,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -129,7 +130,7 @@ img {
 
 /*Hero*/
 .header__hero {
-  background-image: url(../build/img/Lago.png);
+  background-image: url(../img/Lago-Movil.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% center;
@@ -137,7 +138,7 @@ img {
 
 @media (min-width: 768px) {
   .header__hero {
-    background-image: url(../build/img/Lago.png);
+    background-image: url(../img/Lago.webp);
     height: 59rem;
     background-position: top;
     background-position: center;
@@ -360,7 +361,7 @@ img {
   padding: 2rem 0;
 }
 
-.header__heroInfo--movil h2 {
+.header__heroInfo--movil h1 {
   color: var(--blanco);
   text-align: center;
   font-size: 3.2rem;
@@ -413,7 +414,7 @@ img {
     display: block;
   }
 
-  .header__heroInfo--desktop h2 {
+  .header__heroInfo--desktop h1 {
     color: var(--blanco);
     font-size: 4rem;
     font-family: Rubik;
@@ -460,7 +461,7 @@ img {
     display: block;
   }
 
-  .header__heroInfo--desktop h2 {
+  .header__heroInfo--desktop h1 {
     color: var(--blanco);
     font-size: 6rem;
     font-family: Rubik;
@@ -507,7 +508,7 @@ img {
 }
 
 .header__heroPattern {
-  background-image: url(../build/img/Pattern\ 1.svg);
+  background-image: url(../img/Pattern-Hero.svg);
   height: 6rem;
 }
 
@@ -598,7 +599,7 @@ img {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .condiciones__aside {
     padding: 4rem 10rem 6rem 10rem;
   }
@@ -611,7 +612,7 @@ img {
     justify-content: flex-start;
     font-size: 3.2rem;
     text-align: left;
-    padding: 2rem;
+    padding: 2rem 2rem 0 4rem;
   }
 }
 
@@ -839,7 +840,6 @@ img {
 @media (min-width: 1200px) {
   .cobertura {
     height: 61.2rem;
-    background-color: #f4f4f4;
   }
 }
 
@@ -896,7 +896,7 @@ img {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cobertura__imagen {
     padding: 0;
   }
@@ -931,7 +931,6 @@ img {
 @media (min-width: 768px) {
   .cobertura__info {
     width: 100%;
-    align-items: center;
     justify-content: center;
     padding: 5rem;
   }
@@ -939,9 +938,7 @@ img {
 
 @media (min-width: 1024px) {
   .cobertura__info {
-    width: 100%;
     align-items: flex-start;
-    justify-content: center;
     padding-right: 4rem;
     text-align: left;
   }

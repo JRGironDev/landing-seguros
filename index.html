@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seguro Viajero</title>
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="build/css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Krub:wght@500;600&family=Montserrat:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="build/css/index.css" />
   </head>
   <body>
     <header class="header">
@@ -19,10 +19,19 @@
         <div class="header__navegacion">
           <div class="header__logo">
             <div class="header__logoImagen">
-              <img
-                src="build/img/Logo-Global.jpg"
-                alt="Logo Global Corredores de Seguros"
-              />
+              <picture>
+                <source
+                  srcset="build/img/Logo-Global.avif"
+                  type="imagen Logo Global/avif"
+                />
+                <img
+                  loading="lazy"
+                  width="120"
+                  height="80"
+                  src="build/img/Logo-Global.webp"
+                  alt="imagen Logo Global"
+                />
+              </picture>
             </div>
 
             <div class="header__logoInfo">
@@ -93,10 +102,10 @@
           <div class="header__heroInfo--desktop">
             <img
               class="header__heroLogo--desktop"
-              src="build/img/Logo-Guatemala.svg"
-              alt="Logo Guatemala"
+              src="build/img/Logo-Inguat-Desktop.svg"
+              alt="Logo Inguat Guatemala"
             />
-            <h2>No dejes que nada arruine tu aventura</h2>
+            <h1>No dejes que nada arruine tu aventura</h1>
             <p>
               Explora sin preocupaciones, descubre con confianza. Nuestro seguro
               para turistas en Guatemala te respalda en cada paso de tu viaje,
@@ -107,10 +116,10 @@
           <div class="header__heroInfo--movil">
             <img
               class="header__heroLogo--movil"
-              src="build/img/Logo Inguat.svg"
-              alt="Logo Guatemala"
+              src="build/img/Logo-Inguat-Movil.svg"
+              alt="Logo Inguat Guatemala"
             />
-            <h2>No dejes que nada arruine tu aventura</h2>
+            <h1>No dejes que nada arruine tu aventura</h1>
             <p>Explora sin preocupaciones, descubre con confianza.</p>
             <a class="hero__btn">Adquirir seguro</a>
           </div>
@@ -137,7 +146,7 @@
               <div class="condicion__icono">
                 <img
                   class="condicion__imagen condicion__imagen-Beneficiarios"
-                  src="build/img/Icono Beneficiarios.svg"
+                  src="build/img/Icono-Beneficiarios.svg"
                   alt="Icono Beneficiarios"
                 />
               </div>
@@ -153,7 +162,7 @@
               <div class="condicion__icono">
                 <img
                   class="condicion__imagen condicion__imagen-Territorialidad"
-                  src="build/img/Icono Territorialidad.svg"
+                  src="build/img/Icono-Territorialidad.svg"
                   alt="Icono Territorialidad"
                 />
               </div>
@@ -166,7 +175,7 @@
               <div class="condicion__icono">
                 <img
                   class="condicion__imagen condicion__imagen-Beneficios"
-                  src="build/img/Icono Beneficios.svg"
+                  src="build/img/Icono-Beneficios.svg"
                   alt="Icono Beneficios"
                 />
               </div>
@@ -183,7 +192,7 @@
               <div class="condicion__icono">
                 <img
                   class="condicion__imagen condicion__imagen-Cobertura"
-                  src="build/img/Icono Cobertura.svg"
+                  src="build/img/Icono-Cobertura.svg"
                   alt="Icono Cobertura"
                 />
               </div>
@@ -204,7 +213,7 @@
         <div class="respaldo__grid">
           <div class="respaldo__flex">
             <div class="respaldo__logoMAPFRE">
-              <img src="build/img/Logo MAPFRE.svg" alt="Logo MAPFRE" />
+              <img src="build/img/Logo-MAPFRE.svg" alt="Logo MAPFRE" />
             </div>
           </div>
           <div class="respaldo__info">
@@ -225,7 +234,23 @@
       <div class="cobertura__grid">
         <div class="cobertura__imagenFlex">
           <div class="cobertura__imagen">
-            <img src="build/img/Composicion.png" alt="Imagen Composición" />
+            <picture>
+              <source
+                loading="lazy"
+                srcset="build/img/Composicion.avif"
+                type="image/avif"
+              />
+              <source
+                loading="lazy"
+                srcset="build/img/Composicion.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="build/img/Composicion.png"
+                alt="Imagen Guatemala"
+              />
+            </picture>
           </div>
         </div>
         <div class="cobertura__flex">
@@ -378,7 +403,7 @@
           <div class="footer__logo">
             <div class="footer__logoImagen">
               <img
-                src="build/img/Logo Globales-Footer.svg"
+                src="build/img/Logo-Globales-Footer.svg"
                 alt="Logo Global Corredores de Seguros"
               />
             </div>
@@ -405,7 +430,7 @@
                     <div class="form__Ln">
                       <a href="">
                         <img
-                          src="build/img/Icono Ln.svg"
+                          src="build/img/Icono-Ln.svg"
                           alt="Icono de LinkedIn"
                           width="20px"
                           height="20px"
@@ -415,7 +440,7 @@
                     <div class="form__Twitter">
                       <a href="">
                         <img
-                          src="build/img/Icono Twitter.svg"
+                          src="build/img/Icono-Twitter.svg"
                           alt="Icono de Twitter"
                           width="20px"
                           height="20px"
@@ -425,7 +450,7 @@
                     <div class="form__Fb">
                       <a href="">
                         <img
-                          src="build/img/Icono Facebook .svg"
+                          src="build/img/Icono-Facebook .svg"
                           alt="Icono de Facebook"
                           width="20px"
                           height="20px"
@@ -445,7 +470,6 @@
         </div>
       </div>
     </footer>
-
-    <script src="js/app.js"></script>
+    <script src="build/js/app.js"></script>
   </body>
 </html>

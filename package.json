@@ -29,6 +29,7 @@
     "postcss": "^8.4.25"
   },
   "dependencies": {
+    "gulp-terser-js": "^5.2.2",
     "sharp": "^0.32.1"
   }
 }

@@ -112,167 +112,227 @@
 
     <main class="formulario">
       <div class="formulario__contenedor">
-        <form class="formulario__form" action="">
+        <form class="formulario__layout" action="">
           <div class="formulario__grid">
             <section class="informacion">
-              <!-- Grupo: Usuario -->
-              <div class="formulario__grupo" id="grupo__usuario">
-                <label for="usuario" class="formulario__label">Usuario</label>
-                <div class="formulario__grupo-input">
-                  <input
-                    type="text"
-                    class="formulario__input"
-                    name="usuario"
-                    id="usuario"
-                    placeholder="john123"
-                  />
-                  <i
-                    class="formulario__validacion-estado fas fa-times-circle"
-                  ></i>
+              <div class="informacion__flex">
+                <h2 class="informacion__heading">Información para el seguro</h2>
+                <div class="formulario__form" id="informacion__form-principal">
+                  <!-- Grupo: Nombres -->
+                  <div class="formulario__grupo" id="grupo__nombres">
+                    <label for="nombres" class="formulario__label"
+                      >Nombres</label
+                    >
+                    <div class="formulario__grupo-input">
+                      <input
+                        type="text"
+                        class="formulario__input"
+                        name="nombres"
+                        id="nombres"
+                        required
+                        placeholder="Ingresa tus nombres"
+                      />
+                      <i
+                        class="formulario__validacion-estado fas fa-times-circle"
+                      ></i>
+                    </div>
+                    <p class="formulario__input-error">
+                      Los nombres solo puede contener letras
+                    </p>
+                  </div>
+
+                  <!-- Grupo: Apellidos -->
+                  <div class="formulario__grupo" id="grupo__apellidos">
+                    <label for="apellidos" class="formulario__label"
+                      >Apellidos</label
+                    >
+                    <div class="formulario__grupo-input">
+                      <input
+                        type="text"
+                        class="formulario__input"
+                        name="apellidos"
+                        id="apellidos"
+                        required
+                        placeholder="Ingresa tus apellidos"
+                      />
+                      <i
+                        class="formulario__validacion-estado fas fa-times-circle"
+                      ></i>
+                    </div>
+                    <p class="formulario__input-error">
+                      Los apellidos solo puede contener letras
+                    </p>
+                  </div>
+
+                  <!-- Grupo: Fecha de Nacimiento -->
+                  <div class="formulario__grupo" id="grupo__fechaNacimiento">
+                    <label for="fechaNacimiento" class="formulario__label"
+                      >Fecha de Nacimiento</label
+                    >
+                    <div class="formulario__grupo-input">
+                      <input
+                        type="date"
+                        class="formulario__input"
+                        name="fechaNacimiento"
+                        required
+                        id="fechaNacimiento"
+                      />
+                      <i
+                        class="formulario__validacion-estado fas fa-times-circle"
+                      ></i>
+                    </div>
+                    <p class="formulario__input-error">
+                      Ingresa una fecha de nacimiento correcta
+                    </p>
+                  </div>
+
+                  <!-- Grupo: Número de Pasaporte-->
+                  <div class="formulario__grupo" id="grupo__pasaporte">
+                    <label for="pasaporte" class="formulario__label"
+                      >Número de Pasaporte</label
+                    >
+                    <div class="formulario__grupo-input">
+                      <input
+                        type="number"
+                        class="formulario__input"
+                        name="pasaporte"
+                        id="pasaporte"
+                        required
+                        placeholder="Ingresa tu número de pasaporte"
+                        min="0"
+                      />
+                      <i
+                        class="formulario__validacion-estado fas fa-times-circle"
+                      ></i>
+                    </div>
+                    <p class="formulario__input-error">
+                      Los números de pasaporte solo puede contener números
+                    </p>
+                  </div>
+
+                  <!-- Grupo: Fecha de Ingreso al Territorio Nacional-->
+                  <div class="formulario__grupo" id="grupo__fechaIngreso">
+                    <label for="fechaIngreso" class="formulario__label"
+                      >Fecha de Ingreso al Territorio Nacional</label
+                    >
+                    <div class="formulario__grupo-input">
+                      <input
+                        type="date"
+                        class="formulario__input"
+                        name="fechaIngreso"
+                        id="fechaIngreso"
+                        required
+                      />
+                      <i
+                        class="formulario__validacion-estado fas fa-times-circle"
+                      ></i>
+                    </div>
+                    <p class="formulario__input-error">
+                      Ingresa una fecha de ingreso al territorio nacional
+                      correcta
+                    </p>
+                  </div>
+
+                  <!-- Grupo: Correo Electronico -->
+                  <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label"
+                      >Correo Electrónico</label
+                    >
+                    <div class="formulario__grupo-input">
+                      <input
+                        type="email"
+                        class="formulario__input"
+                        name="correo"
+                        id="correo"
+                        required
+                        placeholder="correo@correo.com"
+                      />
+                      <i
+                        class="formulario__validacion-estado fas fa-times-circle"
+                      ></i>
+                    </div>
+                    <p class="formulario__input-error">
+                      El correo electrónico solo puede contener letras, numeros,
+                      puntos, guiones y guion bajo.
+                    </p>
+                  </div>
+
+                  <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p>
+                      <i class="fas fa-exclamation-triangle"></i>
+                      <b>Error:</b> Por favor rellena el formulario
+                      correctamente.
+                    </p>
+                  </div>
                 </div>
-                <p class="formulario__input-error">
-                  El usuario tiene que ser de 4 a 16 dígitos y solo puede
-                  contener numeros, letras y guion bajo.
-                </p>
-              </div>
-
-              <!-- Grupo: Nombre -->
-              <div class="formulario__grupo" id="grupo__nombre">
-                <label for="nombre" class="formulario__label">Nombre</label>
-                <div class="formulario__grupo-input">
-                  <input
-                    type="text"
-                    class="formulario__input"
-                    name="nombre"
-                    id="nombre"
-                    placeholder="John Doe"
-                  />
-                  <i
-                    class="formulario__validacion-estado fas fa-times-circle"
-                  ></i>
-                </div>
-                <p class="formulario__input-error">
-                  El usuario tiene que ser de 4 a 16 dígitos y solo puede
-                  contener numeros, letras y guion bajo.
-                </p>
-              </div>
-
-              <!-- Grupo: Contraseña -->
-              <div class="formulario__grupo" id="grupo__password">
-                <label for="password" class="formulario__label"
-                  >Contraseña</label
-                >
-                <div class="formulario__grupo-input">
-                  <input
-                    type="password"
-                    class="formulario__input"
-                    name="password"
-                    id="password"
-                  />
-                  <i
-                    class="formulario__validacion-estado fas fa-times-circle"
-                  ></i>
-                </div>
-                <p class="formulario__input-error">
-                  La contraseña tiene que ser de 4 a 12 dígitos.
-                </p>
-              </div>
-
-              <!-- Grupo: Contraseña 2 -->
-              <div class="formulario__grupo" id="grupo__password2">
-                <label for="password2" class="formulario__label"
-                  >Repetir Contraseña</label
-                >
-                <div class="formulario__grupo-input">
-                  <input
-                    type="password"
-                    class="formulario__input"
-                    name="password2"
-                    id="password2"
-                  />
-                  <i
-                    class="formulario__validacion-estado fas fa-times-circle"
-                  ></i>
-                </div>
-                <p class="formulario__input-error">
-                  Ambas contraseñas deben ser iguales.
-                </p>
-              </div>
-
-              <!-- Grupo: Correo Electronico -->
-              <div class="formulario__grupo" id="grupo__correo">
-                <label for="correo" class="formulario__label"
-                  >Correo Electrónico</label
-                >
-                <div class="formulario__grupo-input">
-                  <input
-                    type="email"
-                    class="formulario__input"
-                    name="correo"
-                    id="correo"
-                    placeholder="correo@correo.com"
-                  />
-                  <i
-                    class="formulario__validacion-estado fas fa-times-circle"
-                  ></i>
-                </div>
-                <p class="formulario__input-error">
-                  El correo solo puede contener letras, numeros, puntos, guiones
-                  y guion bajo.
-                </p>
-              </div>
-
-              <!-- Grupo: Teléfono -->
-              <div class="formulario__grupo" id="grupo__telefono">
-                <label for="telefono" class="formulario__label">Teléfono</label>
-                <div class="formulario__grupo-input">
-                  <input
-                    type="text"
-                    class="formulario__input"
-                    name="telefono"
-                    id="telefono"
-                    placeholder="4491234567"
-                  />
-                  <i
-                    class="formulario__validacion-estado fas fa-times-circle"
-                  ></i>
-                </div>
-                <p class="formulario__input-error">
-                  El telefono solo puede contener numeros y el maximo son 14
-                  dígitos.
-                </p>
-              </div>
-
-              <!-- Grupo: Terminos y Condiciones -->
-              <div class="formulario__grupo" id="grupo__terminos">
-                <label class="formulario__label">
-                  <input
-                    class="formulario__checkbox"
-                    type="checkbox"
-                    name="terminos"
-                    id="terminos"
-                  />
-                  Acepto los Terminos y Condiciones
-                </label>
-              </div>
-
-              <div class="formulario__mensaje" id="formulario__mensaje">
-                <p>
-                  <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
-                  favor rellena el formulario correctamente.
-                </p>
               </div>
             </section>
 
-            <aside>
-              <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">Enviar</button>
-                <p
-                  class="formulario__mensaje-exito"
-                  id="formulario__mensaje-exito"
-                >
-                  Formulario enviado exitosamente!
-                </p>
+            <aside class="checkout">
+              <div class="checkout_box">
+                <div class="checkout__contenedor">
+                  <div class="checkout_flex">
+                    <div class="condicion">
+                      <div class="condicion__icono">
+                        <img
+                          class="condicion__imagen"
+                          src="build/img/Ropa-Turista.webp"
+                          alt="Icono Beneficiarios"
+                        />
+                      </div>
+                      <div class="condicion__info">
+                        <h3 class="condicion__title">Seguro turismo</h3>
+                        <p class="condicion__description">
+                          Seguro medico o por asistencia en el camino con la
+                          duración de 15 días.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="checkout__detalle">
+                      <div class="checkout__detalle-row">
+                        <p>Seguro Individual</p>
+                        <p>Q100</p>
+                      </div>
+
+                      <div class="checkout__detalle-row">
+                        <p>Integrante extra (1)</p>
+                        <p>Q100</p>
+                      </div>
+
+                      <div class="checkout__detalle-row">
+                        <p>Sub total</p>
+                        <p>Q100</p>
+                      </div>
+
+                      <div class="checkout__detalle-row">
+                        <p>Impuestos</p>
+                        <p>Q100</p>
+                      </div>
+                    </div>
+
+                    <div class="checkout__total">
+                      <div class="checkout__total-row">
+                        <p>Total</p>
+                        <p>Q100</p>
+                      </div>
+                    </div>
+
+                    <div class="checkout__boton">
+                      <div class="formulario__grupo">
+                        <button type="submit" class="formulario__btn">
+                          Continuar con la compra
+                        </button>
+                        <p
+                          class="formulario__mensaje-exito"
+                          id="formulario__mensaje-exito"
+                        >
+                          Formulario enviado exitosamente!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
@@ -358,5 +418,6 @@
       src="https://kit.fontawesome.com/2c36e9b7b1.js"
       crossorigin="anonymous"
     ></script>
+    <script src="build/js/formulario.js"></script>
   </body>
 </html>
